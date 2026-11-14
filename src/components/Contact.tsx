@@ -1,5 +1,6 @@
 import { site } from "@/data/site";
 import { Reveal } from "@/components/Reveal";
+import { WhatsAppIcon } from "@/components/WhatsAppFab";
 
 export function Contact() {
   return (
@@ -24,12 +25,13 @@ export function Contact() {
         <Reveal delayMs={120}>
           <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:items-center">
             <a
-              href={site.upwork}
+              href={site.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-h-12 items-center justify-center bg-paper px-6 text-sm font-medium text-ink transition-colors hover:bg-mist"
+              className="inline-flex min-h-12 items-center justify-center gap-2 border border-[#25D366]/50 bg-[#25D366]/10 px-6 text-sm font-medium text-paper transition-colors hover:border-[#25D366] hover:bg-[#25D366]/20"
             >
-              Hire on Upwork
+              <WhatsAppIcon className="h-5 w-5 text-[#25D366]" />
+              WhatsApp
             </a>
             <a
               href="#work"

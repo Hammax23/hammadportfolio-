@@ -24,15 +24,7 @@ export function Hero() {
             {site.support}
           </p>
           <div className="animate-rise-delay-3 mt-8 flex w-full flex-col gap-3 sm:mt-10 sm:w-auto sm:flex-row sm:flex-wrap">
-            <a
-              href={site.upwork}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary w-full sm:w-auto"
-            >
-              View Upwork profile
-            </a>
-            <a href="#work" className="btn-secondary w-full sm:w-auto">
+            <a href="#work" className="btn-primary w-full sm:w-auto">
               See selected work
             </a>
           </div>

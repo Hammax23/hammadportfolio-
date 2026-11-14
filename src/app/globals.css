@@ -230,6 +230,125 @@ svg {
   border-bottom: 1px solid var(--line);
 }
 
+.hire-drawer-backdrop {
+  opacity: 0;
+  transition: opacity 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hire-drawer-panel {
+  transform: translateY(100%);
+  transition: transform 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hire-drawer.is-open .hire-drawer-backdrop {
+  opacity: 1;
+}
+
+.hire-drawer.is-open .hire-drawer-panel {
+  transform: translateY(0);
+}
+
+@media (min-width: 640px) {
+  .hire-drawer-panel {
+    transform: translateX(100%);
+  }
+
+  .hire-drawer.is-open .hire-drawer-panel {
+    transform: translateX(0);
+  }
+}
+
+.hire-drawer-body {
+  -webkit-overflow-scrolling: touch;
+}
+
+.hire-input {
+  display: block;
+  width: 100%;
+  min-height: 2.85rem;
+  border: none;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  padding: 0.7rem 0;
+  color: var(--ink);
+  /* 16px prevents iOS zoom-on-focus */
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+@media (min-width: 640px) {
+  .hire-input {
+    min-height: 2.75rem;
+    padding: 0.65rem 0;
+    font-size: 0.9375rem;
+  }
+}
+
+.hire-input::placeholder {
+  color: color-mix(in srgb, var(--muted) 70%, white);
+}
+
+.hire-input:focus {
+  border-bottom-color: var(--accent);
+}
+
+.hire-textarea {
+  min-height: 7rem;
+  resize: none;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .hire-textarea {
+    min-height: 6.5rem;
+    resize: vertical;
+  }
+}
+
+.hire-select-wrap {
+  position: relative;
+}
+
+.hire-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  padding-right: 1.75rem;
+  cursor: pointer;
+  color: color-mix(in srgb, var(--muted) 78%, white);
+}
+
+.hire-select:valid,
+.hire-select.has-value {
+  color: var(--ink);
+}
+
+.hire-select option {
+  color: var(--ink);
+  background-color: var(--paper);
+}
+
+.hire-select option[value=""] {
+  color: var(--muted);
+}
+
+.hire-select-chevron {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 0.9rem;
+  height: 0.9rem;
+  transform: translateY(-50%);
+  color: var(--muted);
+  pointer-events: none;
+}
+
 .flow-line {
   stroke-dasharray: 5 7;
   animation: flow-dash 1.4s linear infinite;
@@ -250,6 +369,11 @@ svg {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .hire-drawer-backdrop,
+  .hire-drawer-panel {
+    transition: none !important;
+  }
+
   .flow-line,
   .flow-line-delay,
   .packet {

@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Process } from "@/components/Process";
+import { WhatsAppFab } from "@/components/WhatsAppFab";
 import { Work } from "@/components/Work";
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <WhatsAppFab />
     </>
   );
 }

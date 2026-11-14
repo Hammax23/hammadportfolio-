@@ -10,14 +10,24 @@ export function Footer() {
         <p className="text-xs text-muted sm:text-sm">
           © 2026 · Full Stack Engineer · Next.js &amp; Laravel
         </p>
-        <a
-          href={site.upwork}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-sm text-ink transition-colors hover:text-accent"
-        >
-          Upwork
-        </a>
+        <div className="flex items-center gap-4">
+          <a
+            href={site.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-ink transition-colors hover:text-[#25D366]"
+          >
+            WhatsApp
+          </a>
+          <a
+            href={site.upwork}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-ink transition-colors hover:text-accent"
+          >
+            Upwork
+          </a>
+        </div>
       </div>
     </footer>
   );

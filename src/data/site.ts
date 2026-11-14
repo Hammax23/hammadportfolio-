@@ -9,6 +9,8 @@ export const site = {
   availability: "Open for select engagements",
   upwork:
     "https://www.upwork.com/freelancers/~01f6fdb0af9e851be0?mp_source=share",
+  whatsapp:
+    "https://wa.me/923004403622?text=Hi%20Hammad%2C%20I%20found%20your%20portfolio",
   nav: [
     { label: "Work", href: "#work" },
     { label: "Experience", href: "#experience" },
