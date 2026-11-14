@@ -1,11 +1,14 @@
 "use client";
 
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import { BrandMark } from "@/components/BrandMark";
 import { HireDrawer } from "@/components/HireDrawer";
 import { site } from "@/data/site";
 
 export function Header() {
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [hireOpen, setHireOpen] = useState(false);
 
@@ -27,22 +30,32 @@ export function Header() {
     };
   }, [menuOpen, hireOpen]);
 
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
+
   return (
     <>
-      <header className="absolute inset-x-0 top-0 z-30">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 sm:py-5 md:px-10 md:py-6">
-          <BrandMark name={site.name} size="nav" nameHref="#top" />
+      <header className="sticky top-0 z-30 border-b border-line/70 bg-paper/90 backdrop-blur-md">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 sm:py-5 md:px-10 md:py-5">
+          <BrandMark name={site.name} size="nav" nameHref="/" />
 
-          <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
-            {site.nav.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="text-sm text-muted transition-colors hover:text-ink"
-              >
-                {item.label}
-              </a>
-            ))}
+          <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary">
+            {site.nav.map((item) => {
+              const active = pathname === item.href;
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`text-sm transition-colors ${
+                    active ? "text-ink" : "text-muted hover:text-ink"
+                  }`}
+                  aria-current={active ? "page" : undefined}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </nav>
 
           <div className="flex items-center gap-3">
@@ -55,7 +68,7 @@ export function Header() {
             </button>
             <button
               type="button"
-              className="inline-flex h-11 w-11 items-center justify-center border border-line text-ink md:hidden"
+              className="inline-flex h-11 w-11 items-center justify-center border border-line text-ink lg:hidden"
               aria-expanded={menuOpen}
               aria-controls="mobile-nav"
               aria-label={menuOpen ? "Close menu" : "Open menu"}
@@ -80,19 +93,25 @@ export function Header() {
         {menuOpen ? (
           <div
             id="mobile-nav"
-            className="fixed inset-x-0 top-[3.75rem] bottom-0 z-40 overflow-y-auto border-t border-line bg-paper/98 px-4 py-8 backdrop-blur-md sm:px-6 md:hidden"
+            className="fixed inset-x-0 top-[3.75rem] bottom-0 z-40 overflow-y-auto border-t border-line bg-paper/98 px-4 py-8 backdrop-blur-md sm:px-6 lg:hidden"
           >
             <nav className="mx-auto flex max-w-7xl flex-col gap-1" aria-label="Mobile">
-              {site.nav.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="border-b border-line py-4 text-lg text-ink"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {item.label}
-                </a>
-              ))}
+              {site.nav.map((item) => {
+                const active = pathname === item.href;
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`border-b border-line py-4 text-lg ${
+                      active ? "text-accent" : "text-ink"
+                    }`}
+                    aria-current={active ? "page" : undefined}
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
               <button
                 type="button"
                 className="btn-primary mt-6 w-full text-sm"

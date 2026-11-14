@@ -135,7 +135,7 @@ export function HireDrawer({ open, onClose }: Props) {
               Tell me what you’re building.
             </h2>
             <p className="mt-1.5 text-[13px] leading-relaxed text-muted sm:mt-2 sm:text-sm">
-              Short brief — I’ll reply with next steps.
+              Send a short brief and I’ll reply with next steps.
             </p>
           </div>
           <button
@@ -158,7 +158,7 @@ export function HireDrawer({ open, onClose }: Props) {
                 Received
               </p>
               <h3 className="mt-2 font-display text-xl font-semibold tracking-tight text-ink sm:text-2xl">
-                Thanks — I’ll review your brief shortly.
+                Thanks. I’ll review your brief shortly.
               </h3>
               <p className="mt-3 text-[13px] leading-relaxed text-muted sm:text-sm">
                 Your details were sent to my email. I’ll get back to you soon.

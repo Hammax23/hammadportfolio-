@@ -44,7 +44,7 @@ export function DataFlowDiagram({ className = "" }: { className?: string }) {
         />
       ))}
 
-      {/* nodes — slim boxes */}
+      {/* nodes, slim boxes */}
       <g stroke="white" strokeWidth="1.15">
         <rect x="22" y="78" width="72" height="40" rx="1.5" fill="white" fillOpacity="0.04" />
         <rect x="128" y="32" width="72" height="40" rx="1.5" fill="white" fillOpacity="0.04" />

@@ -5,12 +5,18 @@ export function Footer() {
     <footer className="border-t border-line bg-paper px-4 py-8 sm:px-6 md:px-10">
       <div className="mx-auto flex max-w-7xl flex-col items-start gap-3 text-left sm:flex-row sm:items-center sm:justify-between sm:gap-4">
         <p className="font-display text-sm font-semibold tracking-tight text-ink">
-          {site.name}
+          {site.fullName}
         </p>
         <p className="text-xs text-muted sm:text-sm">
-          © 2026 · Full Stack Engineer · Next.js &amp; Laravel
+          © 2026 · Full Stack Engineer ·{" "}
+          <a
+            href={site.url}
+            className="transition-colors hover:text-ink"
+          >
+            hammadiftikhar.com
+          </a>
         </p>
-        <div className="flex items-center gap-4">
+        <div className="flex flex-wrap items-center gap-4">
           <a
             href={site.whatsapp}
             target="_blank"

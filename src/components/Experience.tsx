@@ -1,8 +1,13 @@
 import { site } from "@/data/site";
 import { Reveal } from "@/components/Reveal";
 import { ExperienceCarousel } from "@/components/ExperienceCarousel";
+import { SectionHeading } from "@/components/SectionHeading";
 
-export function Experience() {
+type Props = {
+  isPage?: boolean;
+};
+
+export function Experience({ isPage = false }: Props) {
   return (
     <section
       id="experience"
@@ -14,12 +19,15 @@ export function Experience() {
             <p className="text-xs tracking-[0.16em] text-accent uppercase sm:text-sm">
               Other experience
             </p>
-            <h2 className="mt-3 font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl md:text-4xl">
+            <SectionHeading
+              isPage={isPage}
+              className="mt-3 font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl md:text-4xl"
+            >
               Additional delivery across SaaS, dashboards, and automation.
-            </h2>
+            </SectionHeading>
             <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
-              Selected engagements beyond the portfolio gallery — production
-              systems built for real business workflows.
+              Selected engagements beyond the portfolio gallery, with
+              production systems built for real business workflows.
             </p>
           </div>
         </Reveal>

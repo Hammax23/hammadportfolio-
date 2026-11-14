@@ -1,8 +1,13 @@
 import { site } from "@/data/site";
 import { Reveal } from "@/components/Reveal";
 import { ProjectCarousel } from "@/components/ProjectCarousel";
+import { SectionHeading } from "@/components/SectionHeading";
 
-export function Work() {
+type Props = {
+  isPage?: boolean;
+};
+
+export function Work({ isPage = false }: Props) {
   return (
     <section
       id="work"
@@ -14,9 +19,12 @@ export function Work() {
             <p className="text-xs tracking-[0.16em] text-accent uppercase sm:text-sm">
               Portfolio
             </p>
-            <h2 className="mt-3 max-w-xl font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl md:text-4xl">
-              Projects from my Upwork portfolio.
-            </h2>
+            <SectionHeading
+              isPage={isPage}
+              className="mt-3 max-w-xl font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl md:text-4xl"
+            >
+              Products built for real users and real scale.
+            </SectionHeading>
           </div>
         </Reveal>
 

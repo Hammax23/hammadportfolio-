@@ -1,7 +1,12 @@
 import { site } from "@/data/site";
 import { Reveal } from "@/components/Reveal";
+import { SectionHeading } from "@/components/SectionHeading";
 
-export function Process() {
+type Props = {
+  isPage?: boolean;
+};
+
+export function Process({ isPage = false }: Props) {
   return (
     <section
       id="process"
@@ -12,9 +17,12 @@ export function Process() {
           <p className="text-xs tracking-[0.16em] text-accent uppercase sm:text-sm">
             Process
           </p>
-          <h2 className="mt-3 max-w-xl font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl md:text-4xl">
+          <SectionHeading
+            isPage={isPage}
+            className="mt-3 max-w-xl font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl md:text-4xl"
+          >
             From idea to launch-ready app.
-          </h2>
+          </SectionHeading>
         </Reveal>
 
         <ol className="mt-10 grid grid-cols-1 gap-8 sm:mt-14 sm:gap-10 md:mt-16 md:grid-cols-3 md:gap-8">

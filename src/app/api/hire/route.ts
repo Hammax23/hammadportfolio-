@@ -94,7 +94,7 @@ export async function POST(request: Request) {
       from: `"Hammad Portfolio" <${user}>`,
       to,
       replyTo: email,
-      subject: `New inquiry from ${name} — ${projectType}`,
+      subject: `New inquiry from ${name}: ${projectType}`,
       text,
       html,
     });

@@ -1,8 +1,13 @@
 import { site } from "@/data/site";
 import { Reveal } from "@/components/Reveal";
 import { DataFlowDiagram } from "@/components/DataFlowDiagram";
+import { SectionHeading } from "@/components/SectionHeading";
 
-export function Expertise() {
+type Props = {
+  isPage?: boolean;
+};
+
+export function Expertise({ isPage = false }: Props) {
   return (
     <section
       id="expertise"
@@ -14,9 +19,12 @@ export function Expertise() {
             <p className="text-xs tracking-[0.16em] text-accent uppercase sm:text-sm">
               Expertise
             </p>
-            <h2 className="mt-3 max-w-xl font-display text-2xl font-semibold tracking-tight sm:text-3xl md:text-4xl">
-              A stack chosen for production software — not demos.
-            </h2>
+            <SectionHeading
+              isPage={isPage}
+              className="mt-3 max-w-xl font-display text-2xl font-semibold tracking-tight sm:text-3xl md:text-4xl"
+            >
+              A stack chosen for production software, not demos.
+            </SectionHeading>
           </Reveal>
 
           <Reveal className="lg:col-span-6" delayMs={120}>

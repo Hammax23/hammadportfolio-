@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { site } from "@/data/site";
 
 type Particle = {
   x: number;
@@ -332,8 +333,17 @@ export function ParticlePortrait({ src, className = "" }: Props) {
       ref={wrapRef}
       className={`relative h-full w-full ${className}`}
       role="img"
-      aria-label="Hammad particle constellation portrait"
+      aria-label={`${site.fullName} particle constellation portrait`}
     >
+      {/* Crawlable fallback for search engines and no-JS */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={src}
+        alt={`${site.fullName}, Full Stack Engineer`}
+        width={800}
+        height={1000}
+        className="sr-only"
+      />
       <canvas
         ref={canvasRef}
         className="absolute inset-0 h-full w-full"

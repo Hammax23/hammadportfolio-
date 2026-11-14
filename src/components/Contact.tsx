@@ -1,8 +1,14 @@
+import Link from "next/link";
 import { site } from "@/data/site";
 import { Reveal } from "@/components/Reveal";
 import { WhatsAppIcon } from "@/components/WhatsAppFab";
+import { SectionHeading } from "@/components/SectionHeading";
 
-export function Contact() {
+type Props = {
+  isPage?: boolean;
+};
+
+export function Contact({ isPage = false }: Props) {
   return (
     <section
       id="contact"
@@ -14,12 +20,15 @@ export function Contact() {
           <p className="text-xs tracking-[0.16em] text-accent uppercase sm:text-sm">
             Contact
           </p>
-          <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight sm:mt-4 sm:text-4xl md:text-5xl">
+          <SectionHeading
+            isPage={isPage}
+            className="mt-3 font-display text-3xl font-semibold tracking-tight sm:mt-4 sm:text-4xl md:text-5xl"
+          >
             Let’s build something that lasts.
-          </h2>
+          </SectionHeading>
           <p className="mx-auto mt-5 max-w-lg text-base text-paper/70 sm:mt-6 sm:text-lg">
-            Available for full-stack product work — SaaS, dashboards, APIs, and
-            launch-critical builds.
+            Available for full stack product work across SaaS, dashboards, APIs,
+            and high priority launches.
           </p>
         </Reveal>
         <Reveal delayMs={120}>
@@ -33,12 +42,12 @@ export function Contact() {
               <WhatsAppIcon className="h-5 w-5 text-[#25D366]" />
               WhatsApp
             </a>
-            <a
-              href="#work"
+            <Link
+              href="/work"
               className="inline-flex min-h-12 items-center justify-center border border-white/20 px-6 text-sm font-medium text-paper transition-colors hover:border-white/50"
             >
               Review my work
-            </a>
+            </Link>
           </div>
         </Reveal>
       </div>

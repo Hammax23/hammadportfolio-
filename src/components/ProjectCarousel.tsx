@@ -85,7 +85,11 @@ export function ProjectCarousel({ projects }: Props) {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={project.image}
-                alt={project.title}
+                alt={`${project.title} project preview by Hammad Iftikhar`}
+                width={640}
+                height={512}
+                loading="lazy"
+                decoding="async"
                 className="h-full w-full object-cover"
               />
             </div>

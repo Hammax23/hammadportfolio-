@@ -1,7 +1,12 @@
 import { site } from "@/data/site";
 import { Reveal } from "@/components/Reveal";
+import { SectionHeading } from "@/components/SectionHeading";
 
-export function About() {
+type Props = {
+  isPage?: boolean;
+};
+
+export function About({ isPage = false }: Props) {
   return (
     <section
       id="about"
@@ -12,9 +17,12 @@ export function About() {
           <p className="text-xs tracking-[0.16em] text-accent uppercase sm:text-sm">
             About
           </p>
-          <h2 className="mt-3 font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl md:text-4xl">
-            Software that feels considered.
-          </h2>
+          <SectionHeading
+            isPage={isPage}
+            className="mt-3 font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl md:text-4xl"
+          >
+            6+ years building products clients can trust.
+          </SectionHeading>
         </Reveal>
         <div className="space-y-5 sm:space-y-6 md:col-span-7 md:col-start-6">
           {site.about.map((paragraph, i) => (
@@ -26,7 +34,7 @@ export function About() {
           ))}
           <Reveal delayMs={220}>
             <p className="pt-1 text-sm tracking-wide text-ink sm:pt-2">
-              {site.location} · Remote-friendly
+              {site.location} · 6+ years experience · Remote-friendly
             </p>
           </Reveal>
         </div>

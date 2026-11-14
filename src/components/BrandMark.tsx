@@ -59,12 +59,15 @@ export function BrandMark({
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={photoSrc}
-              alt=""
+              alt={`${name} profile photo`}
+              width={96}
+              height={96}
+              decoding="async"
               className="h-full w-full object-cover object-[center_18%]"
             />
           </button>
 
-          {/* Online status — WhatsApp-style */}
+          {/* Online status, WhatsApp-style */}
           <span
             className="absolute right-0 bottom-0 z-[1] flex h-2.5 w-2.5 items-center justify-center sm:h-3 sm:w-3"
             title="Online"
