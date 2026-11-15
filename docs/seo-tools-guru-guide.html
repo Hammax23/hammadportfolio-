@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+  <meta charset="UTF-8" />
+  <title>SEO Tools Guru Guide — Hammad Iftikhar</title>
+  <style>
+    @page { margin: 18mm 16mm; size: A4; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+      color: #14202b;
+      line-height: 1.55;
+      font-size: 11.5pt;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    h1 {
+      font-size: 22pt;
+      margin: 0 0 6px;
+      color: #0b1320;
+    }
+    h2 {
+      font-size: 14pt;
+      margin: 28px 0 10px;
+      padding-bottom: 4px;
+      border-bottom: 2px solid #1f6feb;
+      color: #0b1320;
+      page-break-after: avoid;
+    }
+    h3 {
+      font-size: 12pt;
+      margin: 16px 0 6px;
+      color: #1a3348;
+      page-break-after: avoid;
+    }
+    .meta {
+      color: #52606d;
+      font-size: 10pt;
+      margin-bottom: 18px;
+    }
+    .box {
+      background: #f4f7fb;
+      border: 1px solid #d7e0ea;
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin: 10px 0 14px;
+    }
+    .gur {
+      background: #fff8e8;
+      border-left: 4px solid #e6a700;
+      padding: 10px 12px;
+      margin: 10px 0 14px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0 16px;
+      font-size: 10.5pt;
+    }
+    th, td {
+      border: 1px solid #c9d4e0;
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #eaf1f8; }
+    ul, ol { margin: 6px 0 12px; padding-left: 22px; }
+    li { margin: 4px 0; }
+    .step { margin: 4px 0; }
+    .footer {
+      margin-top: 28px;
+      padding-top: 10px;
+      border-top: 1px solid #d7e0ea;
+      font-size: 9.5pt;
+      color: #667788;
+    }
+    .avoid-break { page-break-inside: avoid; }
+  </style>
+</head>
+<body>
+  <h1>SEO Tools Guru Guide</h1>
+  <p class="meta">
+    Site: <strong>www.hammadiftikhar.com</strong><br />
+    Audience: Full Stack Engineer / Freelance Portfolio<br />
+    Language: Simple Roman Urdu + clear English terms<br />
+    Purpose: In 5 tools ko sahi tarike se utilize karna
+  </p>
+
+  <div class="box">
+    <strong>Sabse pehle yaad rakho:</strong><br />
+    Ye 5 tools ek hi cheez nahi dikhate. Har tool ka <em>ek sawal</em> hota hai.
+    Tools kholte rehna ranking nahi laata. Har hafte <strong>1 clear action</strong>
+    (better title, LinkedIn post, backlink, naya project detail) — yahi asli SEO hai.
+  </div>
+
+  <h2>1) Poori Tasveer — 5 Tools ka Map</h2>
+  <table class="avoid-break">
+    <thead>
+      <tr>
+        <th>Tool</th>
+        <th>Ek lafz mein</th>
+        <th>Asli sawal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Google Search Console (GSC)</strong></td>
+        <td>Google search report</td>
+        <td>Google mujhe search pe kahan dikhata hai?</td>
+      </tr>
+      <tr>
+        <td><strong>Bing Webmaster</strong></td>
+        <td>Extra search engine</td>
+        <td>Bing / IndexNow side theek hai?</td>
+      </tr>
+      <tr>
+        <td><strong>Google Analytics (GA4)</strong></td>
+        <td>Visitor behavior</td>
+        <td>Site pe aake log kya karte hain?</td>
+      </tr>
+      <tr>
+        <td><strong>Ahrefs</strong></td>
+        <td>Research + backlinks</td>
+        <td>Competition aur links kahan se aayein?</td>
+      </tr>
+      <tr>
+        <td><strong>Semrush</strong></td>
+        <td>Research + audit</td>
+        <td>Keywords, audit, tracking ek jagah?</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="gur">
+    <strong>Gur formula:</strong><br />
+    Research (Ahrefs / Semrush) → Site improve / publish → Wait →
+    Measure (GSC + GA4) → Repeat
+  </div>
+
+  <h2>2) Google Search Console — Detail</h2>
+  <p>
+    GSC bataata hai Google ne tumhari site ko search results mein kaise treat kiya:
+    kaunsi query, kitni impressions, kitne clicks, kaunsi page index hai ya error.
+  </p>
+
+  <h3>Kab kholo?</h3>
+  <ul>
+    <li>Haftay mein 2 baar (15–20 minutes)</li>
+    <li>Naya page publish karne ke turant baad (URL Inspection)</li>
+    <li>Jab traffic sudden drop ho</li>
+  </ul>
+
+  <h3>Kya dekho? (priority order)</h3>
+  <ol>
+    <li>
+      <strong>Performance</strong><br />
+      Queries, pages, countries, devices. Note karo:
+      <ul>
+        <li>Top queries jahan impression hai lekin CTR kam</li>
+        <li>Queries jahan tum already page-1 near ho (improve title/meta)</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Page indexing</strong><br />
+      Kaunsi URLs indexed / not indexed / error. Errors fix karo pehle.
+    </li>
+    <li>
+      <strong>URL Inspection</strong><br />
+      Important URLs pe Request indexing (spam mat karo roz).
+    </li>
+    <li>
+      <strong>Sitemaps</strong><br />
+      <code>sitemap.xml</code> Success hona chahiye. Dobara roz submit mat karo.
+    </li>
+  </ol>
+
+  <h3>Tumhari site ke liye practical use</h3>
+  <ul>
+    <li>Home, /work, /about, /expertise, /contact pe focus</li>
+    <li>Agar query aaye “full stack developer” → title/H1/about copy align karo</li>
+    <li>Agar /work pe clicks hain → projects ke names aur tech stack clear rakho</li>
+  </ul>
+
+  <div class="gur">
+    <strong>Gur:</strong> GSC = school result card. Yahan se pata chalta hai Google ne accept kiya ya nahi.
+    Keywords “rank” ka final proof yahi se aata hai (queries + position).
+  </div>
+
+  <h2>3) Bing Webmaster Tools — Detail</h2>
+  <p>
+    Bing alag search engine hai (Yahoo/DuckDuckGo partners bhi). Traffic Google se kam hota hai,
+    lekin free extra reach + IndexNow se fast notify milta hai.
+  </p>
+
+  <h3>Kab kholo?</h3>
+  <ul>
+    <li>Mahine mein 1–2 baar kaafi</li>
+    <li>Nayi site / bari update ke baad IndexNow / sitemap check</li>
+  </ul>
+
+  <h3>Kya use karo?</h3>
+  <ul>
+    <li><strong>Sitemaps:</strong> same <code>https://www.hammadiftikhar.com/sitemap.xml</code></li>
+    <li><strong>URL Inspection:</strong> important pages submit</li>
+    <li><strong>IndexNow:</strong> pehle se setup; bari update pe dobara submit useful</li>
+    <li><strong>Keyword Research:</strong> kabhi idea ke liye; Google + Ahrefs/Semrush stronger</li>
+    <li><strong>Backlinks:</strong> data late aa sakta hai; empty = normal nayi site pe</li>
+  </ul>
+
+  <div class="gur">
+    <strong>Gur:</strong> 80% energy Google (GSC + GA4) pe. Bing = bonus lane, primary battlefield nahi.
+  </div>
+
+  <h2>4) Google Analytics 4 (GA4) — Detail</h2>
+  <p>
+    GA4 batata hai: kitne log aaye, kahan se aaye, kaunsa page dekha, kitni der ruke,
+    Contact/Hire tak gaye ya bounce kiya.
+  </p>
+
+  <h3>GSC vs GA4 (confusion khatam)</h3>
+  <table class="avoid-break">
+    <thead>
+      <tr>
+        <th>GSC</th>
+        <th>GA4</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Search query: “hire full stack”</td>
+        <td>User ne /contact open kiya?</td>
+      </tr>
+      <tr>
+        <td>Click mila Google se</td>
+        <td>10 second baad bounce?</td>
+      </tr>
+      <tr>
+        <td>Sirf Google Search</td>
+        <td>Google + LinkedIn + Direct + referral sab</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Kab kholo?</h3>
+  <ul>
+    <li>Haftay mein 1–2 baar</li>
+    <li>Campaign / LinkedIn post ke baad Realtime check</li>
+  </ul>
+
+  <h3>Kya dekho?</h3>
+  <ol>
+    <li><strong>Realtime</strong> — abhi traffic aa rahi hai ya nahi (tag test)</li>
+    <li><strong>Reports → Acquisition</strong> — source: Organic, Direct, Referral, Social</li>
+    <li><strong>Engagement → Pages and screens</strong> — top pages</li>
+    <li><strong>Retention</strong> — wapas aa rahe hain ya nahi</li>
+  </ol>
+
+  <h3>Portfolio ke liye success metrics</h3>
+  <ul>
+    <li>/contact visits</li>
+    <li>Hire drawer / form opens (agar event set ho)</li>
+    <li>WhatsApp clicks (agar track karo)</li>
+    <li>/work pe time on page</li>
+  </ul>
+
+  <div class="gur">
+    <strong>Gur:</strong> GSC = door se aana. GA4 = ghar ke andar kya kiya.
+    Dono milake poori kahani banati hai.
+  </div>
+
+  <h2>5) Ahrefs — Detail</h2>
+  <p>
+    Ahrefs research weapon hai. Ye batata hai competitors ke backlinks, top pages,
+    keyword difficulty, aur content gaps. Web Analytics script bhi site pe laga hai.
+  </p>
+
+  <h3>Kab kholo?</h3>
+  <ul>
+    <li>Hafte mein 1 baar research session (30–45 min)</li>
+    <li>Jab naya case-study / service page likhna ho</li>
+  </ul>
+
+  <h3>Core features kaise use karo</h3>
+  <ol>
+    <li>
+      <strong>Site Explorer (apni site)</strong>
+      <ul>
+        <li>Domain Rating / backlinks count over time</li>
+        <li>Top pages by traffic potential</li>
+        <li>Referring domains quality (spam vs real sites)</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Site Explorer (competitor)</strong>
+      <ul>
+        <li>Unke top organic pages dekho</li>
+        <li>Unke backlinks kahan se aaye (guest post, directories, clients)</li>
+        <li>Jo easy links tum bhi le sakte ho, un pe action</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Keywords Explorer</strong>
+      <ul>
+        <li>Volume, KD (difficulty), parent topic</li>
+        <li>Portfolio ke liye hire-intent keywords prefer karo</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Content Gap</strong>
+      <ul>
+        <li>Competitor rank karta hai, tum nahi → content idea list</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Web Analytics (installed)</strong>
+      <ul>
+        <li>Ahrefs wala traffic view; GSC/GA ke saath compare</li>
+      </ul>
+    </li>
+  </ol>
+
+  <h3>Freelance ke liye best keyword types</h3>
+  <ul>
+    <li>hire full stack developer</li>
+    <li>next.js developer for hire</li>
+    <li>react native app developer</li>
+    <li>laravel saas developer</li>
+    <li>project-based: chauffeur app, school management system, etc.</li>
+  </ul>
+
+  <div class="gur">
+    <strong>Gur:</strong> Ahrefs se <em>plan</em> banta hai. GSC/GA se <em>result</em> check hota hai.
+    Roz Ahrefs kholna zaroori nahi.
+  </div>
+
+  <h2>6) Semrush — Detail</h2>
+  <p>
+    Semrush bhi all-in-one hai (keywords, site audit, position tracking, competitors).
+    Ahrefs jaisa overlap bohot hai. Dono ko roz parallel mat chalao.
+  </p>
+
+  <h3>Practical split (recommended)</h3>
+  <table class="avoid-break">
+    <thead>
+      <tr>
+        <th>Ahrefs pe focus</th>
+        <th>Semrush pe focus</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Backlinks + competitor link research</td>
+        <td>Site Audit (technical issues)</td>
+      </tr>
+      <tr>
+        <td>Content gap / keyword difficulty deep dive</td>
+        <td>Position tracking (weekly ranks)</td>
+      </tr>
+      <tr>
+        <td>Referring domains quality</td>
+        <td>On-page / content ideas + topic reports</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Semrush weekly use</h3>
+  <ol>
+    <li>Site Audit chalao → errors/warnings fix (broken links, missing meta, etc.)</li>
+    <li>Position Tracking mein 10–20 keywords add karo</li>
+    <li>1 competitor overview → unke top keywords note</li>
+  </ol>
+
+  <div class="gur">
+    <strong>Gur:</strong> Budget/time bachane ke liye <strong>ek primary research tool</strong> choose karo
+    (Ahrefs YA Semrush). Doosra optional backup.
+  </div>
+
+  <h2>7) Keywords ko site pe kaise use karein</h2>
+  <p>Keyword select karna half kaam hai. Use = sahi jagah natural placement.</p>
+  <table class="avoid-break">
+    <thead>
+      <tr>
+        <th>Jagah</th>
+        <th>Example</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Title tag</td>
+        <td>Hammad Iftikhar | Full Stack Developer</td>
+      </tr>
+      <tr>
+        <td>Meta description</td>
+        <td>Hire a full stack developer for Next.js, React Native…</td>
+      </tr>
+      <tr>
+        <td>H1</td>
+        <td>Keyword ek dafa, natural</td>
+      </tr>
+      <tr>
+        <td>First paragraph</td>
+        <td>Service + proof (projects)</td>
+      </tr>
+      <tr>
+        <td>Image alt</td>
+        <td>Meaningful, keyword stuffed nahi</td>
+      </tr>
+      <tr>
+        <td>Internal links</td>
+        <td>/work ↔ /expertise ↔ /contact</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><strong>Rule:</strong> 1 page = 1 primary keyword. 3–5 natural mentions. Stuffing mat karo.</p>
+
+  <h2>8) Backlinks — short gur</h2>
+  <p>
+    Backlink = doosri website pe tumhari site ka link. Google isay trust vote samajhta hai.
+  </p>
+  <ul>
+    <li><strong>Achhi:</strong> client credit, LinkedIn/GitHub/Upwork, real guest posts, partner pages</li>
+    <li><strong>Buri:</strong> spam directories, paid junk farms, fake comments</li>
+  </ul>
+  <p>
+    Check kahan: Ahrefs Site Explorer / Bing Backlinks (late data). Banani kahan: real relationships + project credits.
+  </p>
+
+  <h2>9) Weekly Routine (30–40 minutes) — Print &amp; Follow</h2>
+  <div class="box avoid-break">
+    <ol>
+      <li><strong>GSC Performance (10 min)</strong> — top queries + CTR notes</li>
+      <li><strong>GA4 (8 min)</strong> — sources + top pages + contact interest</li>
+      <li><strong>Ahrefs YA Semrush (12 min)</strong> — 5 keywords OR 1 competitor OR audit issues</li>
+      <li><strong>1 Action (10 min)</strong> — title improve / LinkedIn post / backlink ask / content tweak</li>
+    </ol>
+  </div>
+
+  <h2>10) Monthly Routine</h2>
+  <ul>
+    <li>GSC indexing errors clean</li>
+    <li>Ahrefs: referring domains badhe ya nahi</li>
+    <li>Semrush audit score improve</li>
+    <li>1 case-study style post (SARJ / SaaS / stack)</li>
+    <li>Profiles sync: LinkedIn, Upwork, GitHub website URL</li>
+  </ul>
+
+  <h2>11) Daily (optional, 5 minutes)</h2>
+  <ul>
+    <li>LinkedIn engage / 1 useful comment with authority</li>
+    <li>Spam tools checking avoid — daily GSC refresh zaroori nahi</li>
+  </ul>
+
+  <h2>12) Mat karo (common mistakes)</h2>
+  <ul>
+    <li>Har din Request indexing spam</li>
+    <li>Sitemap roz resubmit</li>
+    <li>Ahrefs + Semrush dono mein same research double</li>
+    <li>Keyword stuffing titles</li>
+    <li>Spam backlink buying</li>
+    <li>Sirf tools dekhna, action na lena</li>
+  </ul>
+
+  <h2>13) Tumhari current setup checklist</h2>
+  <table class="avoid-break">
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Status goal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Live site HTTPS</td><td>www.hammadiftikhar.com</td></tr>
+      <tr><td>GSC property + sitemap</td><td>8 URLs discovered / Success</td></tr>
+      <tr><td>Bing + IndexNow</td><td>Submitted</td></tr>
+      <tr><td>GA4 Measurement ID</td><td>G-S4N6LF4YS3 on site</td></tr>
+      <tr><td>GTM</td><td>GTM-TBBD4N9N on site</td></tr>
+      <tr><td>Ahrefs Web Analytics</td><td>Script installed</td></tr>
+      <tr><td>Off-page</td><td>LinkedIn / Upwork / GitHub links + posts</td></tr>
+    </tbody>
+  </table>
+
+  <h2>14) Final Guru Lines</h2>
+  <div class="box">
+    <p><strong>1.</strong> Research tools se idea lo.</p>
+    <p><strong>2.</strong> Site + LinkedIn pe execute karo.</p>
+    <p><strong>3.</strong> GSC + GA4 se measure karo.</p>
+    <p><strong>4.</strong> Jo kaam kare usay double karo; jo waste ho usay chhoro.</p>
+    <p style="margin-bottom:0">
+      <strong>5.</strong> Portfolio SEO slow + compounding hai. 2–4 hafte patience normal hai.
+    </p>
+  </div>
+
+  <p class="footer">
+    Prepared for Hammad Iftikhar portfolio SEO workflow.<br />
+    File: seo-tools-guru-guide.pdf · Keep offline for weekly reference.
+  </p>
+</body>
+</html>

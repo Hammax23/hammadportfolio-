@@ -1,5 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Instrument_Sans, Syne } from "next/font/google";
+import { AhrefsAnalytics } from "@/components/AhrefsAnalytics";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+import { GoogleTagManager } from "@/components/GoogleTagManager";
 import { JsonLd } from "@/components/JsonLd";
 import { site } from "@/data/site";
 import "./globals.css";
@@ -106,6 +109,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         className="min-h-full flex flex-col font-sans"
         suppressHydrationWarning
       >
+        <GoogleTagManager />
+        <GoogleAnalytics />
+        <AhrefsAnalytics />
         <JsonLd />
         {children}
       </body>
